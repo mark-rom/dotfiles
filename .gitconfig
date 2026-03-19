@@ -1,0 +1,14 @@
+[user]
+	name = Pavel Sergeev
+	email = pavel.al.sergeev@gmail.com
+
+[core]
+	sshCommand = ssh -i ~/.ssh/id_ed25519 # -F /dev/null
+
+[includeIf "hasconfig:remote.*.url:*gitlab.com:appfollow/**"]
+	path = ~/Dev/appfollow/.gitconfig-appfollow
+
+[includeIf "hasconfig:remote.*.url:gitlab.com/appfollow/**"]
+	path = ~/Dev/appfollow/.gitcofig-appfollow
+[init]
+	defaultbranch = master
