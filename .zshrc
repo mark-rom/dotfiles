@@ -81,7 +81,7 @@ autoload -Uz compinit
 compinit -u 
 
 export python_modules=(pytest nox ruff)
-source $DEV/configs/python_modules_autocomplete.zsh
+source $DEV/dotfiles/python_modules_autocomplete.zsh
 
 # Example to install completion:
 # talosctl completion zsh > ~/.zfunc/_talosctl
