@@ -51,8 +51,8 @@ setopt SHARE_HISTORY     # Share history between sessions
 if [[ "$OSTYPE" == darwin* ]]; then
     brew_prefix="$(brew --prefix)"
     fpath+=("${brew_prefix}/share/zsh/site-functions")
-# else 
-#     fpath+=($HOME/.zsh/pure)
+else 
+    fpath+=($HOME/.zsh/pure)
 fi
 
 autoload -U promptinit; promptinit
@@ -71,7 +71,7 @@ alias ls='ls --color=auto'
 
 # ~~~~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~
 
-path+=~/.zfunc
+fpath+=~/.zfunc
 
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-complitions:$FPATH
@@ -80,10 +80,12 @@ fi
 autoload -Uz compinit
 compinit -u 
 
-zstyle ':completion:*' menu select
+export python_modules=(pytest nox ruff)
+source $DEV/configs/python_modules_autocomplete.zsh
 
 # Example to install completion:
 # talosctl completion zsh > ~/.zfunc/_talosctl
 
 
 # ~~~~~~~~~~~~~~~~~~ Misc ~~~~~~~~~~~~~~~~~~
+
