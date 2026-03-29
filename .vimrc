@@ -23,9 +23,3 @@ syntax on
 set nocompatible
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
-" set statusline
-
-" Russian - PC Langmap for Vim
-" Maps Cyrillic keys to QWERTY equivalents including punctuation
-set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-
